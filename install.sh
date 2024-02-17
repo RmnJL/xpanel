@@ -51,6 +51,9 @@ checkOS() {
     fi
   fi
 }
+wellcomeINSTALL() {
+  linkd="https://github.com/RmnJL/xpanel/releases/download/v3-9-4/v3.9.4.zip"
+}
 configSSH() {
   sed -i 's/#Port 22/Port 22/' /etc/ssh/sshd_config
   sed -i 's/Banner \/root\/banner.txt/#Banner none/g' /etc/ssh/sshd_config
@@ -251,7 +254,6 @@ EOF
     else
       touch /var/www/xpanelport
     fi
-    linkd=https://github.com/RmnJL/xpanel/releases/download/v3-9-4/v3.9.4.zip
     link=$(sudo curl -Ls "$linkd" | grep '"browser_download_url":' | sed -E 's/.*"([^"]+)".*/\1/')
     sudo wget -O /var/www/html/update.zip $link
     sudo unzip -o /var/www/html/update.zip -d /var/www/html/ &
