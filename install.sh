@@ -7,6 +7,8 @@ BLUE="\e[34m"
 CYAN="\e[36m"
 ENDCOLOR="\e[0m"
 
+linkd=https://github.com/RmnJL/xpanel/archive/refs/tags/v3-9-4.zip
+
 if [ "$EUID" -ne 0 ]; then
   echo "Please run as root"
   exit
@@ -92,9 +94,6 @@ cp /var/www/html/example/index.php /var/www/
     dmp=""
     dmssl=""
   fi
-}
-wellcomeINSTALL() {
-  $linkd=https://github.com/RmnJL/xpanel/archive/refs/tags/v3-9-4.zip
 }
 userINPU() {
   echo -e "\nPlease input IP Server"
