@@ -118,7 +118,7 @@ connect = 0.0.0.0:$sshport
             reboot
             ;;
         4)
-            bash <(curl -Ls https://github.com/xpanel-cp/XPanel-SSH-User-Management/raw/master/install.sh --ipv4)
+            bash <(curl -Ls https://github.com/RmnJL/xpanel/raw/master/install.sh --ipv4)
             ;;
         5)
         echo "You accept the risk of removing the panel (y/n)"
@@ -145,22 +145,22 @@ $banner
 EOF
             ;;
             8)
-            bash <(curl -Ls https://github.com/xpanel-cp/XPanel-SSH-User-Management/raw/master/block_iran.sh --ipv4)
+            bash <(curl -Ls https://github.com/RmnJL/xpanel/raw/master/block_iran.sh --ipv4)
             ;;
             9)
              sudo iptables -F
             ;;
             10)
-            bash <(curl -Ls https://raw.githubusercontent.com/xpanel-cp/Dropbear-ssh/main/install.sh)
+            bash <(curl -Ls https://raw.githubusercontent.com/RmnJL/Dropbear-ssh/main/install.sh)
             ;;
             11)
-            bash <(curl -Ls https://raw.githubusercontent.com/xpanel-cp/XPanel-SSH-User-Management/master/wp-install.sh --ipv4)
+            bash <(curl -Ls https://raw.githubusercontent.com/RmnJL/xpanel/master/wp-install.sh --ipv4)
             ;;
             12)
-            bash <(curl -Ls https://raw.githubusercontent.com/xpanel-cp/XPanel-SSH-User-Management/master/fix-call.sh --ipv4)
+            bash <(curl -Ls https://raw.githubusercontent.com/RmnJL/xpanel/master/fix-call.sh --ipv4)
             ;;
             13)
-            bash <(curl -Ls https://raw.githubusercontent.com/xpanel-cp/XPanel-SSH-User-Management/master/apache.sh --ipv4)
+            bash <(curl -Ls https://raw.githubusercontent.com/RmnJL/xpanel/master/apache.sh --ipv4)
             ;;
         0)
             echo "Exiting the menu."
