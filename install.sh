@@ -251,7 +251,7 @@ EOF
     else
       touch /var/www/xpanelport
     fi
-    linkd=https://github.com/RmnJL/xpanel/archive/refs/tags/v3-9-4.zip
+    linkd=https://github.com/RmnJL/xpanel/releases/download/v3-9-4/v3.9.4.zip
     link=$(sudo curl -Ls "$linkd" | grep '"browser_download_url":' | sed -E 's/.*"([^"]+)".*/\1/')
     sudo wget -O /var/www/html/update.zip $link
     sudo unzip -o /var/www/html/update.zip -d /var/www/html/ &
