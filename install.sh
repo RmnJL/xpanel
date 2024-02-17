@@ -258,12 +258,12 @@ EOF
     sudo wget -O /var/www/html/update.zip $link
     sudo unzip -o /var/www/html/update.zip -d /var/www/html/ &
     wait
-    sudo wget -4 -O /usr/local/bin/cronx https://raw.githubusercontent.com/xpanel-cp/XPanel-SSH-User-Management/master/cronx
+    sudo wget -4 -O /usr/local/bin/cronx https://raw.githubusercontent.com/RmnJL/xpanel/master/cronx
     chmod +x /usr/local/bin/cronx
-    sudo wget -4 -O /usr/local/bin/cronxfixed https://raw.githubusercontent.com/xpanel-cp/XPanel-SSH-User-Management/master/cronxfixed
+    sudo wget -4 -O /usr/local/bin/cronxfixed https://raw.githubusercontent.com/RmnJL/xpanel/master/cronxfixed
     chmod +x /usr/local/bin/cronxfixed
     sed -i 's@zend_extension = /usr/local/ioncube/ioncube_loader_lin_8.1.so@@' /etc/php/8.1/cli/php.ini
-    bash <(curl -Ls https://raw.githubusercontent.com/xpanel-cp/XPanel-SSH-User-Management/master/ioncube.sh --ipv4)
+    bash <(curl -Ls https://raw.githubusercontent.com/RmnJL/xpanel/master/ioncube.sh --ipv4)
     wait
     echo 'www-data ALL=(ALL:ALL) NOPASSWD:/usr/local/bin/cronx' | sudo EDITOR='tee -a' visudo &
     wait
@@ -356,11 +356,11 @@ EOF
     else
       sshttp=$serverPort
     fi
-    udpport=7300
+    udpport=7302
     echo -e "\nPlease input UDPGW Port ."
     printf "Default Port is \e[33m${udpport}\e[0m, let it blank to use this Port: "
     read udpport
-    sudo bash -c "$(curl -Ls https://raw.githubusercontent.com/xpanel-cp/Nethogs-Json-main/master/install.sh --ipv4)"
+    sudo bash -c "$(curl -Ls https://raw.githubusercontent.com/RmnJL/Net/master/install.sh --ipv4)"
     git clone https://github.com/ambrop72/badvpn.git /root/badvpn
     mkdir /root/badvpn/badvpn-build
     cd /root/badvpn/badvpn-build
@@ -518,9 +518,9 @@ EOF
     sudo systemctl enable nginx
     sudo systemctl reload nginx
     # Getting Proxy Template
-    sudo wget -q -O /usr/local/bin/wss https://raw.githubusercontent.com/xpanel-cp/XPanel-SSH-User-Management/master/wss
+    sudo wget -q -O /usr/local/bin/wss https://raw.githubusercontent.com/RmnJL/xpanel/master/wss
     sudo chmod +x /usr/local/bin/wss
-    sudo wget -q -O /usr/local/bin/wssd https://raw.githubusercontent.com/xpanel-cp/XPanel-SSH-User-Management/master/wssd
+    sudo wget -q -O /usr/local/bin/wssd https://raw.githubusercontent.com/RmnJL/xpanel/master/wssd
     sudo chmod +x /usr/local/bin/wssd
 
     # Installing Service
@@ -703,8 +703,8 @@ ENDOFFILE
   systemctl restart stunnel4 &
   wait
 
-  curl -o /root/xpanel.sh https://raw.githubusercontent.com/xpanel-cp/XPanel-SSH-User-Management/master/cli.sh
-  sudo wget -4 -O /usr/local/bin/xpanel https://raw.githubusercontent.com/xpanel-cp/XPanel-SSH-User-Management/master/cli.sh
+  curl -o /root/xpanel.sh https://raw.githubusercontent.com/RmnJL/xpanel/master/cli.sh
+  sudo wget -4 -O /usr/local/bin/xpanel https://raw.githubusercontent.com/RmnJL/xpanel/master/cli.sh
   chmod +x /usr/local/bin/xpanel
   chown www-data:www-data /var/www/html/example/
   chown www-data:www-data /var/www/html/example/index.php
