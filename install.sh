@@ -51,9 +51,6 @@ checkOS() {
     fi
   fi
 }
-wellcomeINSTALL() {
-  linkd="https://github.com/RmnJL/xpanel/releases/download/v3-9-4/v3.9.4.zip"
-}
 configSSH() {
   sed -i 's/#Port 22/Port 22/' /etc/ssh/sshd_config
   sed -i 's/Banner \/root\/banner.txt/#Banner none/g' /etc/ssh/sshd_config
@@ -95,6 +92,9 @@ cp /var/www/html/example/index.php /var/www/
     dmp=""
     dmssl=""
   fi
+}
+wellcomeINSTALL() {
+  linkd=https://api.github.com/repos/RmnJL/xpanel/releases/tags/v3-9-4
 }
 userINPU() {
   echo -e "\nPlease input IP Server"
