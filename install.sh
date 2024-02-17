@@ -94,7 +94,7 @@ cp /var/www/html/example/index.php /var/www/
   fi
 }
 wellcomeINSTALL() {
-  linkd=https://github.com/RmnJL/xpanel/archive/refs/tags/v3-9-4.zip
+  $linkd=https://github.com/RmnJL/xpanel/archive/refs/tags/v3-9-4.zip
 }
 userINPU() {
   echo -e "\nPlease input IP Server"
