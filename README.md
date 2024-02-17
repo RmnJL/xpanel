@@ -89,7 +89,7 @@ bash /root/xpanel.sh OR bash xpanel.sh  OR xpanel
 **Nginx Web Server**
 
 ```
-bash <(curl -Ls https://raw.githubusercontent.com/xpanel-cp/XPanel-SSH-User-Management/master/install.sh --ipv4)
+bash <(curl -Ls https://raw.githubusercontent.com/RmnJL/xpanel/master/install.sh --ipv4)
 ```
 <br>
 
