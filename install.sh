@@ -178,7 +178,6 @@ startINSTALL() {
 
     sudo NEETRESTART_MODE=a apt-get update --yes
     sudo apt update -y
-    sudo apt upgrade -y
     sudo apt install php8.1-json -y
     apt-get install -y stunnel4 && apt-get install -y cmake && apt-get install -y screenfetch && apt-get install -y openssl
     sudo apt-get -y install software-properties-common
